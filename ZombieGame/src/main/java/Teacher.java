@@ -15,16 +15,9 @@
  */
 public class Teacher extends Survivor{
     
-    // Attributes
-    
-    // Static variable to uniquely identitfy object
-    private static int count = 1;
-    
-    public Teacher(){
-        setAttack(5);
-        setHealth(50);
-        setType("Teacher");
-        setName("Teacher " + count);
-        count++;
+    // Construtor 
+    public Teacher(String name){
+        super(name, 50, 5);
     };
+    
 }

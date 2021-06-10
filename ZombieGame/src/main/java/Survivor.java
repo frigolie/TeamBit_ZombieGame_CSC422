@@ -15,14 +15,9 @@
  */
 public class Survivor extends Character{
 
-    // Subtracts int parameters from Survivors health e.g. teacher1.takeDamage(5)
-    // Abstract method of parent Character class
-    public void takeDamage(int damage){
-        this.setHealth(this.getHealth() - damage);
+    public Survivor(String name, int health, int attack) {
+        super(name, health, attack);
     }
     
-    public String toString(){
-        return this.getType() + " Health:" + this.getHealth() + " Attack:" + this.getAttack();
-    }
 }
 

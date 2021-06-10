@@ -16,18 +16,9 @@
 
 public class Child extends Survivor{
     
-    // Attributes
-    
-    // Static variable to uniquely identitfy object
-    private static int count = 1;
-    
     // Construtor 
-    public Child(){
-        setAttack(2);
-        setHealth(20);
-        setType("Child");
-        setName("Child " + count);
-        count++;
+    public Child(String name){
+        super(name, 20, 2);
     };
     
 }
