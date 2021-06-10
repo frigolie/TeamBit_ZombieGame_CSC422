@@ -16,16 +16,9 @@
 
 public class CommonInfected extends Zombie{
     
-    // Attributes
-    
-    // Static variable to uniquely identitfy object
-    private static int count = 1;
-    
-    public CommonInfected(){
-        setAttack(5);
-        setHealth(30);
-        setType("CommonInfected");
-        setName("CommonInfected " + count);
-        count++;
+    // Construtor 
+    public CommonInfected(String name){
+        super(name, 30, 5);
     };
+    
 }

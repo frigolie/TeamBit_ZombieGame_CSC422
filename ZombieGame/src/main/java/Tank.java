@@ -15,16 +15,9 @@
  */
 public class Tank extends Zombie{
     
-    // Attributes
-    
-    // Static variable to uniquely identitfy object
-    private static int count = 1;
-  
-    public Tank(){
-        setAttack(20);
-        setHealth(150);
-        setType("Tank");
-        setName("Tank " + count);
-        count++;
+    // Construtor 
+    public Tank(String name){
+        super(name, 150, 20);
     };
+    
 }

@@ -15,13 +15,7 @@
  */
 public class Zombie extends Character{
 
-    // Subtracts int parameters from Zombies health e.g. tank2.takeDamage(5)
-    // Abstract method of parent Character class
-    public void takeDamage(int damage){
-        this.setHealth(this.getHealth() - damage);
-    }
-    
-    public String toString(){
-        return this.getType() + " Health:" + this.getHealth() + " Attack:" + this.getAttack();
+    public Zombie(String name, int health, int attack) {
+        super(name, health, attack);
     }
 }

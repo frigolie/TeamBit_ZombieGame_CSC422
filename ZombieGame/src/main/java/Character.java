@@ -13,26 +13,26 @@
  * 
  * Created 06/08/2021
  */
-abstract class Character {
+public class Character {
     // Attributes
-    
-    // Specifies type of chacter that has been created Zombie, Teacher, Etc.
-    private String characterType;
-    // Specifies specific instance of a type e.g. Zombie 1, Teacher 1, ZOmbie 2
-    private String characterName;
+    private String name;
     private int attack = 0;
     private int health = 0;
+    
+    public Character(String name, int health, int attack) {
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+    }
 
-    // Abstract method to allow character to take damage
-    abstract void takeDamage(int damage);
+    // Method to allow character to take damage
+    public void takeDamage(int damage){
+        this.health -= damage;
+    }
     
     // Method checks health to determine if character is dead
     public boolean isDead(){
-        if (this.getHealth() <= 0){
-            return true;
-        } else {
-            return false;
-        }
+        return this.health <= 0;
     }
     
     // Getter Methods
@@ -43,10 +43,7 @@ abstract class Character {
         return this.health;
     }
     String getName(){
-        return this.characterName;
-    }
-    String getType(){
-        return this.characterType;
+        return this.name;
     }
     
     
@@ -58,9 +55,12 @@ abstract class Character {
         this.health = h;
     }
     void setName(String name){
-        this.characterName = name;
+        this.name = name;
     }
-    void setType(String t){
-        this.characterType = t;
+    
+    @Override
+    public String toString(){
+        return this.name + " Health:" + this.health + " Attack:" + this.attack;
     }
+    
 }

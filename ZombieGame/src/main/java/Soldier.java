@@ -16,16 +16,9 @@
 
 public class Soldier extends Survivor{
     
-    // Attributes
-    
-    // Static variable to uniquely identitfy object
-    private static int count = 1;
-    
-    public Soldier(){
-        setAttack(10);
-        setHealth(100);
-        setType("Soldier");
-        setName("Soldier " + count);
-        count++;
+    // Construtor 
+    public Soldier(String name){
+        super(name, 100, 10);
     };
+    
 }
