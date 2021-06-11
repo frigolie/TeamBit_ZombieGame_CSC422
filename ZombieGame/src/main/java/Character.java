@@ -1,3 +1,4 @@
+
 /**
  * Character Super Class for ZombieGame project
  */
@@ -6,61 +7,41 @@
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
  * Team Bit
+ *
  * @author Amanda Perrine
  * @author Elise Frigoli
  * @author Jordan Duesterhoeft
  * @author Steven Wiltse
- * 
+ *
  * Created 06/08/2021
  */
-public class Character {
-    // Attributes
-    private String name;
-    private int attack = 0;
-    private int health = 0;
-    
-    public Character(String name, int health, int attack) {
-        this.name = name;
+public abstract class Character {
+
+    private int health;
+    private int attack;
+
+    /*
+    public Character() {
+        health = 0;
+        attack = 0;
+    }*/
+
+    public Character(int health, int attack) {
         this.health = health;
         this.attack = attack;
     }
 
-    // Method to allow character to take damage
-    public void takeDamage(int damage){
-        this.health -= damage;
+    public int getHealth() {
+        return health;
     }
-    
-    // Method checks health to determine if character is dead
-    public boolean isDead(){
-        return this.health <= 0;
+
+    public int getAttack() {
+        return attack;
     }
-    
-    // Getter Methods
-    int getAttack(){
-        return this.attack;
+
+    public void setHealth(int health) {
+        this.health = health;
     }
-    int getHealth(){
-        return this.health;
-    }
-    String getName(){
-        return this.name;
-    }
-    
-    
-    // Setter Methods
-    void setAttack(int a){
-        this.attack = a;
-    }
-    void setHealth(int h){
-        this.health = h;
-    }
-    void setName(String name){
-        this.name = name;
-    }
-    
-    @Override
-    public String toString(){
-        return this.name + " Health:" + this.health + " Attack:" + this.attack;
-    }
-    
+
+    public abstract void attack(Character[] characters);
 }
