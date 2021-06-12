@@ -15,6 +15,12 @@
  */
 public class ZombieParty extends Party{
     
+    // Attributes
+    
+    // Tracks number of specific instances of each type of Zombie in party
+    private int tanks = 0;
+    private int commonInfected = 0;
+    
     // Constructors
     // Default
     public ZombieParty(){}
@@ -24,34 +30,28 @@ public class ZombieParty extends Party{
     public ZombieParty(int partySize){
         
         for(int i=0; i < partySize; i++){
-            // Random int generator 
-            int randomNum = (int)(Math.random() * 100);  // 0 to 9
-
-            if(randomNum < 20){
-                // 20% chance of to add Tank (NOTE: change if needed)
-                this.add(new Tank());
-            } else {
-                // 80% chance of to add CommonInfected (NOTE: change if needed)
-                this.add(new CommonInfected());
+            
+                // Random int generator 
+                int randomNum = (int)(Math.random() * 100);  // 0 to 9
+                
+                if(randomNum < 20){
+                    // 20% chance of to add Tank (NOTE: change if needed)
+                    party.add(new Tank());
+                    tanks++;
+     
+                } else {
+                    // 80% chance of to add CommonInfected (NOTE: change if needed)
+                    party.add(new CommonInfected());
+                    commonInfected++;
+                }
             }
-        }
     }
     
-    @Override
-    public int[] getPartyInfo() {
-        int numberOfCommonInfected = 0;
-        int numberOfTanks = 0;
-        
-        for (Character survivor : this) {
-            if (survivor instanceof CommonInfected) {
-                numberOfCommonInfected++;
-            } else if (survivor instanceof Tank) {
-                numberOfTanks++;
-            }
-        }
-        
-        int[] partyInfo = {numberOfCommonInfected, numberOfTanks};
-        return partyInfo;
+    // Getter methods for # of each type in party
+    public int getCommonInfected(){
+        return this.commonInfected;
     }
-    
+    public int getTanks(){
+        return this.tanks;
+    }
 }
