@@ -27,12 +27,16 @@ public final class GameView {
     public GameView() {}
     
     /**
-     * Will display info about which Characters are killed during a battle.
+     * Displays the name of each attacker-casualty pair from a battle.
      * 
-     * @param battleInfo 
+     * @param battleInfo ArrayList of Fatality objects generated during battle
      */
     public void displayBattleInfo(BattleInfo battleInfo) {
-        //Implement in release 2.0
+        for (Fatality fatality : battleInfo) {
+            String attacker = fatality.getAttacker();
+            String casualty = fatality.getCasualty();
+            System.out.println(attacker + " killed " + casualty);
+        }
     }
     
     /**
