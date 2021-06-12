@@ -2,7 +2,6 @@
 /**
  * Teacher Subclass of Character for ZombieGame project
  */
-
 /**
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
@@ -17,8 +16,24 @@
  */
 public class Teacher extends Survivor {
 
+    // static numer
+    private static int number = 1;
+
+    /**
+     * constructor
+     */
     public Teacher() {
-        super(50, 5);
+        super(number, 50, 5);
+        number++;
+    }
+
+    /**
+     *
+     * @return name of the object
+     */
+    @Override
+    public String toString() {
+        return "Teacher " + this.getNo();
     }
 
 }
