@@ -16,13 +16,6 @@
  */
 public class SurvivorParty extends Party{
     
-    // Attributes
-    
-    // Tracks number of specific instances of each type of Survivor in party
-    private int children = 0;
-    private int soldiers = 0;
-    private int teachers = 0;
-     
     // Constructors
     // Default
     public SurvivorParty(){}
@@ -33,33 +26,40 @@ public class SurvivorParty extends Party{
         
         for(int i=0; i < partySize; i++){
                 
-                // Random int generator 
-                int randomNum = (int)(Math.random() * 100);  // 0 to 99
-                
-                // 25% chance of to add soldier (NOTE: change if needed)
-                if(randomNum < 25){
-                    party.add(new Soldier());
-                    soldiers++;
-                // 25% chance of to add teacher (NOTE: change if needed)
-                } else if (randomNum >= 25 && randomNum < 50){
-                    party.add(new Teacher());
-                    teachers++;
-                } else {
-                // 50% chance of to add child (NOTE: change if needed)
-                    party.add(new Child());
-                    children++;
-                }
-            } 
+            // Random int generator 
+            int randomNum = (int)(Math.random() * 100);  // 0 to 99
+
+            // 25% chance of to add soldier (NOTE: change if needed)
+            if(randomNum < 25){
+                this.add(new Soldier());
+            // 25% chance of to add teacher (NOTE: change if needed)
+            } else if (randomNum >= 25 && randomNum < 50){
+                this.add(new Teacher());
+            } else {
+            // 50% chance of to add child (NOTE: change if needed)
+                this.add(new Child());
+            }
+        } 
+    }
+
+    @Override
+    public int[] getPartyInfo() {
+        int numberOfChildren = 0;
+        int numberOfTeachers = 0;
+        int numberOfSoldiers = 0;
+        
+        for (Character survivor : this) {
+            if (survivor instanceof Child) {
+                numberOfChildren++;
+            } else if (survivor instanceof Teacher) {
+                numberOfTeachers++;
+            } else if (survivor instanceof Soldier) {
+                numberOfSoldiers++;
+            }
+        }
+        
+        int[] partyInfo = {numberOfChildren, numberOfTeachers, numberOfSoldiers};
+        return partyInfo;
     }
     
-    // Getter methods for # of each type in party
-    public int getChildren(){
-        return this.children;
-    }
-    public int getSoldiers(){
-        return this.soldiers;
-    }
-    public int getTeachers(){
-        return this.teachers;
-    }
 }
