@@ -16,8 +16,23 @@
  */
 public class Tank extends Zombie {
 
+    // static number 
+    private static int number = 1;
+
+    /**
+     * constructor
+     */
     public Tank() {
-        super(150, 20);
+        super(number, 150, 20);
+        number++;
     }
 
+    /**
+     *
+     * @return name of the object
+     */
+    @Override
+    public String toString() {
+        return "Tank " + this.getNo();
+    }
 }
