@@ -35,7 +35,7 @@ public final class GameView {
         for (Fatality fatality : battleInfo) {
             String attacker = fatality.getAttacker();
             String casualty = fatality.getCasualty();
-            System.out.println(attacker + " killed " + casualty);
+            System.out.printf("%s killed %s\n", attacker, casualty);
         }
     }
     
@@ -55,10 +55,13 @@ public final class GameView {
         int numberOfTanks = zombiePartyInfo[1];
         int numberOfZombies = numberOfCommonInfected + numberOfTanks;
         
-        System.out.println("We have " + numberOfSurvivors + " survivors trying "
-                + "to make it to safety.");
-        System.out.println("But there are " + numberOfZombies + " zombies "
-                + "waiting for them.");
+        System.out.printf("We have %d survivors trying to make it to safety. "
+                + "(%d children, %d teachers, and %d soldiers)\n", 
+                numberOfSurvivors, numberOfChildren, numberOfTeachers, 
+                numberOfSoldiers);
+        System.out.printf("But there are %d zombies waiting for them. (%d "
+                + "common infected, %d tanks)\n", numberOfZombies, 
+                numberOfCommonInfected, numberOfTanks);
     }
     
     /**
@@ -70,7 +73,8 @@ public final class GameView {
         if (remainingSurvivors == 0) {
             System.out.println("None of the survivors made it.");
         } else {
-            System.out.println("It seems " + remainingSurvivors + " have made it to safety.");
+            System.out.printf("It seems %d have made it to safety.\n", 
+                    remainingSurvivors);
         }
     }
     
