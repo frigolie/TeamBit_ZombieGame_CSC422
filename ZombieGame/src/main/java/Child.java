@@ -2,7 +2,6 @@
 /**
  * Child Subclass of Character for ZombieGame project
  */
-
 /**
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
@@ -17,8 +16,23 @@
  */
 public class Child extends Survivor {
 
+    /// static number 
+    private static int number = 1;
+
+    /**
+     * constructor
+     */
     public Child() {
-        super(20, 2);
+        super(number, 20, 2);
+        number++;
     }
 
+    /**
+     *
+     * @return name of the object
+     */
+    @Override
+    public String toString() {
+        return "Child " + this.getNo();
+    }
 }
