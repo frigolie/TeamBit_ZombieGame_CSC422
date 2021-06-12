@@ -15,47 +15,35 @@
  */
 
 import java.util.ArrayList; // import the ArrayList class
+import java.util.Iterator;
 
-public abstract class Party extends ArrayList<Character> {
+public class Party implements Iterable<Character>{
     
     // Default Constructor
     public Party(){}
     
-    public void attack(Party defendingParty, BattleInfo battleInfo) {
-        int attack;
-        int health;
-        String attackerName;
-        String casualtyName;
-        
-        for (Character attacker : this) {
-            if (!attacker.isDead()) {
-                for (Character defender : defendingParty) {
-                    if (!defender.isDead()) {
-                        attack = attacker.getAttack();
-                        health = defender.getHealth();
-                        health -= attack;
-                        defender.setHealth(health);
-                        if (defender.isDead()) {
-                            attackerName = attacker.getName();
-                            casualtyName = defender.getName();
-                            battleInfo.add(new Fatality(attackerName, casualtyName));
-                        }
-                    }
-                }
-            }
-        }
+    // Create Arraylist of the Character Class to hold party
+    protected ArrayList<Character> party = new ArrayList<Character>();
+
+    
+    // Allows party class to be iterable
+    @Override
+    public Iterator<Character> iterator() {
+        return party.iterator();
     }
     
-    public abstract int[] getPartyInfo();
-    
-    public int getRemainingCharacters() {
-        int remainingCharacters = 0;
-        
-        for (Character character : this) {
-            if (!character.isDead()) {
-                remainingCharacters++;
-            }
-        }
-        return remainingCharacters;
+    // Methods add add,get,remove,size functionality to Party classes
+    public void add(Character c){
+        party.add(c);
     }
+    public Character get(int i){
+        return party.get(i);
+    }
+    public void remove(int index){
+        party.remove(index);
+    }
+    public int size(){
+        return party.size();
+    }
+        
 }
