@@ -179,7 +179,7 @@ public class Main {
      * @return the array
      */
     private static Character[] generate(int charaterNum) {
-        // program randomly generate an array of survior and soombies
+        // program randomly generate an array of survior and zombies
         Character[] characters = new Character[charaterNum];
 
         for (int i = 0; i < characters.length; i++) {
