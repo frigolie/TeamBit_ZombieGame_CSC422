@@ -14,10 +14,14 @@
  * Created 06/08/2021
  */
 public class Main {
+    
+    private static GameControl gameControl;
+    
     public static void main(String[] args) {
         
-        // Code to call GameView Class (user interface)
-        GameView view = new GameView();
+        // Starts the main control sequence.
+        // gameControl will construct the GameView
+        gameControl = new GameControl();
         
         // ****************  NOTE TEST CODE delete when not needed ***************
         ZombieParty party = new ZombieParty(10);
