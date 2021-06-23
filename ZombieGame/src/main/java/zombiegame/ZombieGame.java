@@ -1,3 +1,9 @@
+package zombiegame;
+
+import zombiegame.app.control.GameControl;
+
+
+
 /**
  * Main Class for ZombieGame project
  */
@@ -13,7 +19,7 @@
  * 
  * Created 06/08/2021
  */
-public class Main {
+public class ZombieGame {
     
     private static GameControl gameControl;
     

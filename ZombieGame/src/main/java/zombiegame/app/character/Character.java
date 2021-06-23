@@ -1,3 +1,5 @@
+package zombiegame.app.character;
+
 /**
  * Character Super Class for ZombieGame project
  */
@@ -36,25 +38,25 @@ public class Character {
     }
     
     // Getter Methods
-    int getAttack(){
+    public int getAttack(){
         return this.attack;
     }
-    int getHealth(){
+    public int getHealth(){
         return this.health;
     }
-    String getName(){
+    public String getName(){
         return this.name;
     }
     
     
     // Setter Methods
-    void setAttack(int a){
+    public void setAttack(int a){
         this.attack = a;
     }
-    void setHealth(int h){
+    public void setHealth(int h){
         this.health = h;
     }
-    void setName(String name){
+    public void setName(String name){
         this.name = name;
     }
     

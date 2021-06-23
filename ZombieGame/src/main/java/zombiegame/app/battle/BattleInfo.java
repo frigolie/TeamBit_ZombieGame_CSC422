@@ -1,3 +1,5 @@
+package zombiegame.app.battle;
+
 /**
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422

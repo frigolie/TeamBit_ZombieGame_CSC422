@@ -1,5 +1,7 @@
+package zombiegame.app.character;
+
 /**
- * Teacher Subclass of Character for ZombieGame project
+ * Soldier Subclass of Character for ZombieGame project
  */
 
 /**
@@ -13,11 +15,12 @@
  * 
  * Created 06/08/2021
  */
-public class Teacher extends Survivor{
+
+public class Soldier extends Survivor{
     
     // Construtor 
-    public Teacher(String name){
-        super(name, 50, 5);
+    public Soldier(String name){
+        super(name, 100, 10);
     };
     
 }

@@ -1,5 +1,7 @@
+package zombiegame.app.character;
+
 /**
- * Subclass of Character for ZombieGame project - Superclass for Survivor type implementations
+ * Subclass of Character for ZombieGame project - Superclass for Zombie type implementations
  */
 
 /**
@@ -13,11 +15,9 @@
  * 
  * Created 06/08/2021
  */
-public class Survivor extends Character{
+public class Zombie extends Character{
 
-    public Survivor(String name, int health, int attack) {
+    public Zombie(String name, int health, int attack) {
         super(name, health, attack);
     }
-    
 }
-

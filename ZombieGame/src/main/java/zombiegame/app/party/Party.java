@@ -1,3 +1,5 @@
+package zombiegame.app.party;
+
 /**
  * Party Class for ZombieGame project - Create collection of Character Objects
  */
@@ -14,6 +16,9 @@
  * Created 06/08/2021
  */
 
+import zombiegame.app.character.Character;
+import zombiegame.app.battle.Fatality;
+import zombiegame.app.battle.BattleInfo;
 import java.util.ArrayList; // import the ArrayList class
 
 public abstract class Party extends ArrayList<Character> {

@@ -1,3 +1,14 @@
+package zombiegame.app.control;
+
+import zombiegame.app.character.Child;
+import zombiegame.app.character.CommonInfected;
+import zombiegame.app.party.Party;
+import zombiegame.app.character.Soldier;
+import zombiegame.app.party.SurvivorParty;
+import zombiegame.app.character.Tank;
+import zombiegame.app.character.Teacher;
+import zombiegame.app.party.ZombieParty;
+
 /**
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
