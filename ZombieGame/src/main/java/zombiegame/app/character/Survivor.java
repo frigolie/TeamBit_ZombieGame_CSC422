@@ -22,7 +22,7 @@ package zombiegame.app.character;
 public class Survivor extends Character {
 
     private Weapon weapon;
-    // there are 7 type of weapon
+    // there are 7 types of weapon
     private static Weapon[] weapons = {
         new Shotgun(), new SubmachineGun(),
         new AssaultRifle(), new Axe(), new Crowbar(),
