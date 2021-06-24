@@ -1,5 +1,7 @@
+package zombiegame.app.character;
+
 /**
- * Tank Subclass of Character for ZombieGame project
+ * Teacher Subclass of Character for ZombieGame project
  */
 
 /**
@@ -13,11 +15,11 @@
  * 
  * Created 06/08/2021
  */
-public class Tank extends Zombie{
+public class Teacher extends Survivor{
     
     // Construtor 
-    public Tank(String name){
-        super(name, 150, 20);
+    public Teacher(String name){
+        super(name, 50, 5);
     };
     
 }

@@ -1,3 +1,5 @@
+package zombiegame.app.character;
+
 /**
  * Child Subclass of Character for ZombieGame project
  */

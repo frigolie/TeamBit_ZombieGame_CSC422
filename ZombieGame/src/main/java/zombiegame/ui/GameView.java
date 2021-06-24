@@ -1,4 +1,8 @@
+package zombiegame.ui;
 
+
+import zombiegame.app.battle.Fatality;
+import zombiegame.app.battle.BattleInfo;
 import java.util.Scanner;
 
 /**

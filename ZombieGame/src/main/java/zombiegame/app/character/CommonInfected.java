@@ -1,3 +1,5 @@
+package zombiegame.app.character;
+
 /**
  * CommonInfected Subclass for ZombieGame project
  */
