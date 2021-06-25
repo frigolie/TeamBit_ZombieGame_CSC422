@@ -19,10 +19,12 @@ package zombiegame.app.battle;
 public class Fatality {
     private String attacker; // Name of Character that attacked
     private String casualty; // Name of Character killed by attacker
+    private String weapon; // Name of Weapon used in battle
     
-    public Fatality(String attacker, String casualty) {
+    public Fatality(String attacker, String casualty, String weapon) {
         this.attacker = attacker;
         this.casualty = casualty;
+        this.weapon = weapon;
     }
     
     public String getAttacker() {
@@ -37,5 +39,12 @@ public class Fatality {
     }
     public void setCasualty(String casualty) {
         this.casualty = casualty;
+    }
+    
+    public String getWeapon() {
+        return this.weapon;
+    }
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
     }
 }
