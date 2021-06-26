@@ -33,6 +33,10 @@ public class Weapon {
         }
         return damage;
     }
+    
+    public String getName() { 
+        return this.name;
+    }
 
     @Override
     public String toString() {
