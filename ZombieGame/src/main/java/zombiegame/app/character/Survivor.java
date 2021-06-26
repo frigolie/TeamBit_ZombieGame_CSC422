@@ -1,56 +1,50 @@
-<<<<<<< Updated upstream:ZombieGame/src/main/java/zombiegame/app/character/Survivor.java
-package zombiegame.app.character;
-=======
->>>>>>> Stashed changes:ZombieGame/src/main/java/Survivor.java
-
-/**
- * Subclass of Character for ZombieGame project - Superclass for Survivor type implementations
- */
-
 /**
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
  * Team Bit
- *
  * @author Amanda Perrine
  * @author Elise Frigoli
  * @author Jordan Duesterhoeft
  * @author Steven Wiltse
- *
+ * 
  * Created 06/08/2021
  */
-public class Survivor extends Character {
+package zombiegame.app.character;
+
+import java.util.Random;
+import zombiegame.app.weapon.Weapon;
+
+/**
+ * {@code Survivor} is an {@code Equippable Character}.
+ */
+public class Survivor extends Character implements Equippable{
 
     private Weapon weapon;
-    // there are 7 types of weapon
-    private static Weapon[] weapons = {
-        new Shotgun(), new SubmachineGun(),
-        new AssaultRifle(), new Axe(), new Crowbar(),
-        new FryingPan(), new Pistol()
-    };
 
     public Survivor(String name, int health, int attack) {
         super(name, health, attack);
-        weapon = weapons[(int) (Math.random() * weapons.length)];
+        equip();
     }
 
     /**
-     * survivor could use weapon
-     *
-     * @return
+     * Equips a random {@code Weapon} from {@code Equippable.WEAPON_CACHE}.
      */
     @Override
-    int getAttack() {
-        return super.getAttack() + weapon.power();
+    public void equip() {
+        Random random = new Random();
+        int numberOfWeapons = Equippable.WEAPON_CACHE.length;
+        int weaponIndex = random.nextInt(numberOfWeapons);
+        this.weapon = Equippable.WEAPON_CACHE[weaponIndex];
     }
 
     /**
-     * getter
-     *
-     * @return
+     * Gets the currently equipped {@code Weapon}.
+     * 
+     * @return currently equipped {@code Weapon}
      */
+    @Override
     public Weapon getWeapon() {
-        return weapon;
+        return this.weapon;
     }
 
 }
