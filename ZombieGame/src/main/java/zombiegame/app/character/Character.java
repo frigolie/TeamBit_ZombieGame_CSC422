@@ -17,7 +17,7 @@ package zombiegame.app.character;
  */
 public class Character {
     // Attributes
-    String name;
+    private String name;
     private int attack = 0;
     private int health = 0;
     
