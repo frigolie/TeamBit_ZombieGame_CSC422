@@ -61,7 +61,7 @@ public final class GameControl {
     }
     
     /**
-     * Contructs BattleControl and starts the getBattleInfo() operation.
+     * Constructs BattleControl and starts the getBattleInfo() operation.
      * 
      * @return battleInfo
      */

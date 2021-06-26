@@ -48,4 +48,3 @@ public class Survivor extends Character implements Equippable{
     }
 
 }
-

@@ -12,6 +12,7 @@ import zombiegame.app.character.CommonInfected;
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
  * Team Bit
+ * 
  * @author Amanda Perrine
  * @author Elise Frigoli
  * @author Jordan Duesterhoeft
@@ -19,7 +20,7 @@ import zombiegame.app.character.CommonInfected;
  * 
  * Created 06/08/2021
  */
-public class ZombieParty extends Party{
+public class ZombieParty extends Party {
     
     // Constructors
     // Default

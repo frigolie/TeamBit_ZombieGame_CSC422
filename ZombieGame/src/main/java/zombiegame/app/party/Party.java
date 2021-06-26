@@ -8,6 +8,7 @@ package zombiegame.app.party;
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
  * Team Bit
+ * 
  * @author Amanda Perrine
  * @author Elise Frigoli
  * @author Jordan Duesterhoeft

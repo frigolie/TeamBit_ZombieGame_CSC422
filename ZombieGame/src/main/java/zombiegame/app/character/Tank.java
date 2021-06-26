@@ -8,6 +8,7 @@ package zombiegame.app.character;
  * Team Project - ZombieGame
  * Concordia St. Paul - CSC 422
  * Team Bit
+ * 
  * @author Amanda Perrine
  * @author Elise Frigoli
  * @author Jordan Duesterhoeft
@@ -15,11 +16,11 @@ package zombiegame.app.character;
  * 
  * Created 06/08/2021
  */
-public class Tank extends Zombie{
+public class Tank extends Zombie {
     
     // Construtor 
-    public Tank(String name){
+    public Tank(String name) {
         super(name, 150, 20);
-    };
+    }
     
 }
