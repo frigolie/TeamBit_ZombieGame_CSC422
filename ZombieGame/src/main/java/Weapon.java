@@ -26,7 +26,7 @@ public class Weapon {
         this.name = name;
     }
 
-    public int power() {
+    public int useWeapon() {
         double rand = Math.random();
         if (rand > accuracy) {
             return 0;
