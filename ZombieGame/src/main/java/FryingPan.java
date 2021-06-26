@@ -1,3 +1,4 @@
+package zombiegame.app.weapon;
 
 /**
  * Team Project - ZombieGame
