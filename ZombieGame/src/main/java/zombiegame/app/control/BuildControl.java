@@ -1,5 +1,6 @@
 package zombiegame.app.control;
 
+import java.util.Random;
 import zombiegame.app.character.Child;
 import zombiegame.app.character.CommonInfected;
 import zombiegame.app.party.Party;
@@ -36,12 +37,14 @@ public class BuildControl {
      * @return Party[], [SurvivorParty, ZombieParty]
      */
     public Party[] build() {
+        Random random = new Random();
+        
         // Initialize amount of each Character type
-        int numberOfChildren = ((int) (Math.random() * 100) % 15) + 1;
-        int numberOfTeachers = ((int) (Math.random() * 100) % 10) + 1;
-        int numberOfSoldiers = ((int) (Math.random() * 100) % 5) + 1;
-        int numberOfCommonInfected = ((int) (Math.random() * 100) % 6) + 1;
-        int numberOfTanks = ((int) (Math.random() * 100) % 2) + 1;
+        int numberOfChildren = random.nextInt(5) + 1;
+        int numberOfTeachers = random.nextInt(4) + 1;
+        int numberOfSoldiers = random.nextInt(3) + 1;
+        int numberOfCommonInfected = random.nextInt(10) + 1;
+        int numberOfTanks = random.nextInt(2) + 1;
         
         // Initializes SurvivorParty
         Party survivorParty = new SurvivorParty();
