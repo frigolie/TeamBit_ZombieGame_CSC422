@@ -4,6 +4,7 @@ import zombiegame.app.character.Child;
 import zombiegame.app.character.Soldier;
 import zombiegame.app.character.Teacher;
 import zombiegame.app.character.Character;
+import zombiegame.app.character.Survivor;
 
 /**
  * Creates of Party Object (collection) of the Survivor type
@@ -22,7 +23,7 @@ import zombiegame.app.character.Character;
  * 
  * Created 06/08/2021
  */
-public class SurvivorParty extends Party {
+public class SurvivorParty extends Party<Survivor> {
     
     // Constructors
     // Default

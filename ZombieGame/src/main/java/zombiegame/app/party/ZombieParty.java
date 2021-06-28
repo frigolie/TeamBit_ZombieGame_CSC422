@@ -3,6 +3,7 @@ package zombiegame.app.party;
 import zombiegame.app.character.Tank;
 import zombiegame.app.character.Character;
 import zombiegame.app.character.CommonInfected;
+import zombiegame.app.character.Zombie;
 
 /**
  * Creates of Party Object (collection) of the Survivor type
@@ -20,7 +21,7 @@ import zombiegame.app.character.CommonInfected;
  * 
  * Created 06/08/2021
  */
-public class ZombieParty extends Party {
+public class ZombieParty extends Party<Zombie> {
     
     // Constructors
     // Default
