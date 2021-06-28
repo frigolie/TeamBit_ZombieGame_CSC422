@@ -39,7 +39,13 @@ public final class GameView {
         for (Fatality fatality : battleInfo) {
             String attacker = fatality.getAttacker();
             String casualty = fatality.getCasualty();
-            System.out.printf("%s killed %s\n", attacker, casualty);
+            String weapon = fatality.getWeapon();
+            
+            if (weapon != null && !(weapon.isEmpty())) {
+                System.out.printf("%s killed %s using a %s\n", attacker, casualty, weapon);
+            } else {
+                System.out.printf("%s killed %s\n", attacker, casualty);
+            }
         }
     }
     
