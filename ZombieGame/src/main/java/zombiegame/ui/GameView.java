@@ -47,6 +47,7 @@ public final class GameView {
                 System.out.printf("%s killed %s\n", attacker, casualty);
             }
         }
+        System.out.println();
     }
     
     /**
@@ -72,6 +73,8 @@ public final class GameView {
         System.out.printf("But there are %d zombies waiting for them. (%d "
                 + "common infected, %d tanks)\n", numberOfZombies, 
                 numberOfCommonInfected, numberOfTanks);
+        System.out.println("Press enter to continue.");
+        input.nextLine();
     }
     
     /**
@@ -86,6 +89,7 @@ public final class GameView {
             System.out.printf("It seems %d have made it to safety.\n", 
                     remainingSurvivors);
         }
+        System.out.println();
     }
     
     /**
@@ -96,10 +100,11 @@ public final class GameView {
      */
     public boolean playAgain() {
         do {
-            System.out.print("Play again? (y/n) ");
+            System.out.println("Play again? (y/n):");
             String selection = input.nextLine();
 
             if (selection.equalsIgnoreCase("y")) {
+                System.out.println();
                 return true;
             } else if (selection.equalsIgnoreCase("n")) {
                 return false;
